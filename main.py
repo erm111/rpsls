@@ -56,3 +56,18 @@ def check_actions(computer_act, user_act):
         elif computer_act == actions[4]:
             print("Spock brokes Scissors.")
             computer_points = computer_points + 1
+
+    return computer_points, user_points
+
+computer_points, user_points = check_actions(computer_action, user_action)
+
+print(f"Computer chose {computer_action}.")
+print(f"You chose {user_action}.")
+print(f"Computer: {computer_points} points. You: {user_points} points.")
+
+if computer_points > user_points:
+    print("Computer wins!")
+elif user_points > computer_points:
+    print("You win!")
+else:
+    print("It's a tie!")
